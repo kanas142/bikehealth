@@ -1,0 +1,22 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.alerta{
+
+    @include m.contenedor-sm;
+    font-size: 1.3rem;
+    margin-bottom: .2rem;
+    padding: .4rem;
+    border-left: 2px solid rgba(v.$rojo,.1);
+    border-radius: .5rem;
+
+
+    &__error{
+        color: v.$rojo;
+        background-color: rgba(v.$rojo,.1);
+    }
+    &__exito{
+        color: v.$verde;
+        background-color: rgba(v.$verde,.1);
+    }
+}

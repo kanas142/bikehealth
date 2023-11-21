@@ -1,0 +1,58 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.mapa{
+    height: 60rem;
+    position: relative;
+    z-index: 1;
+
+    &__contenedor{
+        @include m.contenedor;
+        margin-bottom: 3rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__texto,
+    .leaflet-popup-content p{
+        font-size: 1.1rem;
+        text-align: center;
+        margin-top: .5rem;
+
+    }
+
+    &__heading{
+        margin: 0;
+        text-align: center;
+        font-size: 1.4rem;
+        margin: 0;
+        color: rgba(v.$gris,1);
+
+    }
+}
+
+
+.ui-autocomplete {
+    height: auto;
+    padding: .5rem;
+    border: 2px solid rgba(v.$verde,.5);
+    background-color: v.$gris-claro;
+    position: absolute;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    list-style: none;
+    z-index: 3;
+    border-radius: .5rem;
+    width: 5rem;
+    
+  }
+  
+  .ui-menu-item {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .ui-menu-item:hover {
+    background-color: rgba(v.$verde,.4);
+    border-radius: .3rem;
+  }
